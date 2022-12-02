@@ -118,6 +118,6 @@ mod tests {
     #[test]
     fn score_following_second_strategy() {
         let result = get_score_with_second_strategy(include_str!("./input.txt"));
-        assert_eq!(result, 23)
+        assert_eq!(result, 12767)
     }
 }
