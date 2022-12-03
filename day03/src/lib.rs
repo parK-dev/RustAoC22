@@ -1,3 +1,16 @@
+// Alphabetical values:
+// a..z = 1..26
+// A..Z = 27.. 52
+
+// Byte values as u16:
+// b'a' = 97
+// b'A' = 65
+
+// Map byte value to alphabetical value:
+
+// if byte is lowercase -> 'a'(97) then 97 - 97 + 1 = 1 (alphabet's a)
+// if byte is uppercase ->  'A'(65) then  65 - 65 + 27 = 27 (alphabet's A)
+
 pub fn solve_part_one(input: &'static [u8]) -> u16 {
     input
         .split(|b| b == &b'\n')
@@ -39,6 +52,7 @@ pub fn solve_part_two(input: &'static [u8]) -> u16 {
         })
         .sum::<u16>()
 }
+
 #[cfg(test)]
 mod tests {
     use super::*;
