@@ -23,7 +23,6 @@ pub fn solve(input: &str, n: usize) -> usize {
     let mut last = input.chars().take(n).collect::<Vec<char>>();
     for (i, c) in input.chars().enumerate() {
         for i in 0..=n - 2 {
-            dbg!(i);
             last[i] = last[i + 1];
         }
 
